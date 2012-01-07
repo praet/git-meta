@@ -1,0 +1,30 @@
+git-meta 0.1
+Usage:  git-meta [ COMMAND ] [ META_FILE ]
+
+git-meta tracks useful metadata of git-versioned files as well as the
+folders they reside in, using a merge-friendly metadata storage format.
+
+Currently the following types of metadata are stored:
+- Modification time (as seconds since Epoch)
+- User ownership (user name, not UID)
+- Group ownership (group name, not GID)
+- Access rights (in octal)
+
+Metadata info is read and written from/to a file called ``.gitmeta''
+in the root of the repo's working tree, though most commands (the ones
+for which it makes sense) can be provided with an alternate filename.
+
+
+COMMANDS:
+  p, print         print metadata to standard output
+  v, validate      validate a metadata file
+  d, diff          compare current metadata to a metadata file
+  s, save          save current metadata to a metadata file
+  r, restore       restore metadata from a metadata file
+
+  -h, --help       display this help and exit
+  -v, --version    output version information and exit
+
+git-meta home page: <http://github/praet/git-meta/>
+Report git-meta bugs to: Pieter Praet <pieter@praet.org>
+Be sure to include the word ``git-meta'' somewhere in the ``Subject:'' field.
